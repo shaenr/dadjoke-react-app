@@ -1,20 +1,42 @@
 :root {
-    --image: ''
-}
+    --image:""
+   }
 
 .ling-ani {
+    position: fixed;
     width:500px;
     height:476px;
     margin-top:-210px;
-    margin-left: -0.8em;
+    margin-left:500px;
     pointer-events:none;
-    background: var(--image);  /* see Image.js */
+    background:"";
+    background:var(--image);
     animation:sprite-ling 2s steps(10) infinite;
-    border-bottom: 5px dashed #000;
-    border-right: 8px dashed #000;
-   }
-   @keyframes sprite-ling {
-    100% {
-     background-position:-5000px 0
+    border-bottom:5px dashed #000;
+    border-right:8px dashed #000;
+    z-index: -999;
+}
+
+.ling-move{
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
     }
-   }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+@keyframes sprite-ling {
+    to {
+        background-position:-5000px 0
+    }
+}
+   

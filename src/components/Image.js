@@ -4,7 +4,7 @@ import './Image.css'
 
 export default function Image(props) {
 
-    const [rendered, setRendered] = useState(false)
+    const [rendered, setRendered] = useState(false);
 
     const animateLing = () => {
         document.documentElement.style.setProperty(
@@ -20,6 +20,7 @@ export default function Image(props) {
     }, [rendered])
 
     return (
-        <div class="ling-ani" />
+        
+        <div className="ling-ani ling-move" />
     )
 }

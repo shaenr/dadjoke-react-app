@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Card';
+// import Button from 'react-bootstrap/Button';
+import { MyButton as Button } from './MyButton';
 
 export default function Joke() {
     
@@ -21,8 +22,8 @@ export default function Joke() {
 
     return (
         <div>
-            <Card border="primary" bg="dark" 
-                  style={{ width: '18rem' }}>
+            <Card border="primary" bg="dark" >
+                
                 <Card.Header as="h5" className="text-secondary bg-light">J O K E</Card.Header>
                 <Card.Body>
                     {typeof joke !== 'undefined' &&
@@ -31,13 +32,10 @@ export default function Joke() {
                         </Card.Text>
                     }
                     <Button
-                        variant="primary"
-                        size="md"
-                        type='button' 
-                        className="p-2 btn-secondary text-white btn-outline-primary btn-bl"
-                        style={{background: '#30115e'}}
-                        onClick={fetchJoke}>
-                        <small>h a h a g i v e m o a r j o k e ! ! !</small>
+                        onClick={fetchJoke}
+                        name="h a h a g i v e m o a r j o k e ! ! !"
+                    >
+                        
                     </Button>
                 </Card.Body>
             </Card>

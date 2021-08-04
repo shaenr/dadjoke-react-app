@@ -11,7 +11,7 @@ export default function Content() {
                 <Joke />
             </Container>
 
-            <Container fixed>
+            <Container>
                 <Image />
             </Container>
         </div>

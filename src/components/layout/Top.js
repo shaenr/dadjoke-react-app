@@ -2,8 +2,9 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav'
-// import SearchBar from '../SearchBar';
-import Button from 'react-bootstrap/Button';
+import SearchBar from '../SearchBar';
+// import { MyButton as Button } from '../MyButton';
+// import Button from 'react-bootstrap/Button';
 
 export default function Top() {
     return (
@@ -18,7 +19,6 @@ export default function Top() {
                 </Navbar.Brand>
                 <Navbar.Toggle 
                     aria-controls="basic-navbar-nav" 
-                    as={Button} 
                     className="btn-secondary bg-secondary text-light">
                     m e n u 
                 </Navbar.Toggle>
