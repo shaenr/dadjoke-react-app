@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import Axios from 'axios';
+import axios from 'axios';
 
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Card';
@@ -12,7 +12,7 @@ export default function Joke() {
         const reqURL = 'https://icanhazdadjoke.com/'
         const reqHeaders = {headers: {Accept: 'application/json'}}
 
-        Axios.get(reqURL, reqHeaders)
+        axios.get(reqURL, reqHeaders)
         .then(res => setJoke(res.data))
         .catch(err => console.log(err))
     }

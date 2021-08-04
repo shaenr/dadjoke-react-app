@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {  
   useEffect(() => {
     document.body.style = 'background: #30115e;';
-    document.body.style = 'background-image: url("./img/ling.gif");'    
+    // document.body.style = 'background-image: url("./img/ling.gif");'    
   }, []);
   return (
     <div className="App">
