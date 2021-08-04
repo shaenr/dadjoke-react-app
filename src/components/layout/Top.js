@@ -4,7 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav'
 // import SearchBar from '../SearchBar';
 import Button from 'react-bootstrap/Button';
-
+import { NavLink } from 'react-router-dom';
+ 
 
 import { baseBtnClassName } from '../../modules/baseClassNames'
 
@@ -27,8 +28,8 @@ export default function Top() {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="navbarCollapse" >
                     <Nav className="me-auto">
-                        <Nav.Link href="/">home</Nav.Link>
-                        <Nav.Link href="/info">info</Nav.Link>
+                        <NavLink className="nav-link" exact to="/">home</NavLink>
+                        <NavLink className="nav-link" exact to="/info">info</NavLink>
                         <Nav.Link 
                             href="https://github.com/shaenr/dadjoke-react-app"
                         >

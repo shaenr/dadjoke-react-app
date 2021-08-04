@@ -18,3 +18,10 @@
      background-position:-5000px 0
     }
    }
+
+   @media screen and (max-width: 400px) {
+    .ling-ani {
+        margin-left: -170px;
+        margin-top: 0px;
+    }
+   }
