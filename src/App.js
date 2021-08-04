@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useEffect } from 'react';
 
-function App() {
+import Top from './components/layout/Top';
+import Content from './components/layout/Content'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+function App() {  
+  useEffect(() => {
+    document.body.style = 'background: #30115e;';
+    document.body.style = 'background-image: url("./img/ling.gif");'    
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Top />
+      <Content />
     </div>
   );
 }
