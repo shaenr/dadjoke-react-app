@@ -4,6 +4,8 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Card';
 
+import { baseBtnClassName } from '../modules/baseClassNames';
+
 export default function Joke() {
     
     const [joke, setJoke] = useState({joke: "I couldn't get the app to initialize state. Click for a joke."})
@@ -19,6 +21,8 @@ export default function Joke() {
 
     useEffect( () => fetchJoke, []); // Pass in Array of States of Check For Updates On
 
+    let btnClassName = baseBtnClassName + " p-2";
+
     return (
         <div>
             <Card border="primary" bg="dark" 
@@ -31,13 +35,14 @@ export default function Joke() {
                         </Card.Text>
                     }
                     <Button
-                        variant="primary"
+                        variant="dark"
                         size="md"
                         type='button' 
-                        className="p-2 btn-secondary text-white btn-outline-primary btn-bl"
+                        className={btnClassName}
+                
                         style={{background: '#30115e'}}
                         onClick={fetchJoke}>
-                        <small>h a h a g i v e m o a r j o k e ! ! !</small>
+                        <small>ｍｏａｒ　ｊｏｋｅ　ｐｌｏｘ</small>
                     </Button>
                 </Card.Body>
             </Card>

@@ -1,22 +1,22 @@
 import { React, useEffect } from 'react';
+import { Route } from 'react-router-dom';
 
 import Top from './components/layout/Top';
 import Content from './components/layout/Content'
+import Info from './components/pages/Info'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 
-
-function App() {  
+export default function App() {  
   useEffect(() => {
     document.body.style = 'background: #30115e;';
-    // document.body.style = 'background-image: url("./img/ling.gif");'    
   }, []);
   return (
     <div className="App">
       <Top />
-      <Content />
+      <Route path="/" exact component={Content} />
+      <Route path="/info" exact component={Info} />
     </div>
   );
 }
-
-export default App;

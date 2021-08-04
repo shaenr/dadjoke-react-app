@@ -9,7 +9,7 @@ export default function Image(props) {
     const animateLing = () => {
         document.documentElement.style.setProperty(
             '--image', 
-            'url("/img/ling-ani.png") no-repeat 0 0')
+            'url("/img/ling-ani.webp") no-repeat 0 0')
     }
 
     useEffect( () => {
@@ -20,6 +20,6 @@ export default function Image(props) {
     }, [rendered])
 
     return (
-        <div class="ling-ani" />
+        <div class="ling-ani" style={{overflow: 'hidden'}} />
     )
 }

@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import "bootswatch/dist/vapor/bootstrap.min.css";
 
 ReactDOM.render(
+  
   <React.StrictMode>
-    <App />
+    <Router forceRefresh={false}>
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
