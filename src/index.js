@@ -9,7 +9,7 @@ import "bootswatch/dist/vapor/bootstrap.min.css";
 ReactDOM.render(
   
   <React.StrictMode>
-    <Router forceRefresh={false}>
+    <Router forceRefresh={false} basename="/" >
       <App />
     </Router>
   </React.StrictMode>,
